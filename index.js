@@ -13,10 +13,8 @@ const params = {
       S: 'testcompany',
     },
     priceClasses: {
-      L:
-      { persons: 2, price: 3.4 },
-      { persons: 4, price: 4 }
-    }
+      L: [{ persons: 2, price: 3.4 }, { persons: 4, price: 4 }],
+    },
   },
   TableName: `${tableNamePrefix}Companies`,
 };
