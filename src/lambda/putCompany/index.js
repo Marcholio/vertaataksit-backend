@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
   var response = {
     statusCode: 200,
     headers: {
-      my_header: 'test_value',
+      my_header: 'test_value2',
     },
     body: JSON.stringify(responseBody),
     isBase64Encoded: false,

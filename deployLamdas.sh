@@ -1,6 +1,7 @@
 npm run build
 rm -rf dist/lambda
 mkdir dist/lambda
-for d in src/lambda/*/; do
+cd src/lambda
+for d in */; do
     bash -H "$d"deploy.sh
 done
