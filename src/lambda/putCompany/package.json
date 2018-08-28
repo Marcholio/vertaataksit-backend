@@ -1,0 +1,11 @@
+{
+  "name": "putCompany",
+  "version": "1.0.0",
+  "description": "VertaaTaksit_putCompany",
+  "main": "index.js",
+  "author": "Markus Tyrkkö",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "aws-sdk": "^2.303.0"
+  }
+}
