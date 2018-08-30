@@ -7,9 +7,7 @@ exports.handler = (event, context, callback) => {
   const tableNamePrefix = 'VertaaTaksit_';
 
   const params = {
-    Item: {
-      event,
-    },
+    Item: event,
     TableName: `${tableNamePrefix}Companies`,
   };
 
