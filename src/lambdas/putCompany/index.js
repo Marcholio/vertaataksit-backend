@@ -6,23 +6,32 @@ exports.handler = (event, context, callback) => {
 
   const tableNamePrefix = 'VertaaTaksit_';
 
-  const params = {
-    Item: event,
-    TableName: `${tableNamePrefix}Companies`,
-  };
-
-  dbClient.put(params, err => {
-    if (err) {
-      callback(null, {
-        statusCode: 500,
-        body: 'An exception occurred',
-      });
-      console.log(err, err.stack);
+  if (!event.body) {
+    callback(null, { statusCode: 500, body: 'Missing request body' });
+  } else {
+    const payload = JSON.parse(event.body);
+    if (!payload.id) {
+      callback(null, { statusCode: 500, body: 'Missing id' });
     } else {
-      callback(null, {
-        statusCode: 200,
-        body: '',
+      const params = {
+        Item: payload,
+        TableName: `${tableNamePrefix}Companies`,
+      };
+
+      dbClient.put(params, err => {
+        if (err) {
+          callback(null, {
+            statusCode: 500,
+            body: 'An exception occurred',
+          });
+          console.log(err, err.stack);
+        } else {
+          callback(null, {
+            statusCode: 200,
+            body: '',
+          });
+        }
       });
     }
-  });
+  }
 };
