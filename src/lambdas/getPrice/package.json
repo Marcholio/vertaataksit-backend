@@ -1,0 +1,11 @@
+{
+  "name": "getprice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Markus Tyrkkö",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@google/maps": "^0.5.5"
+  }
+}
