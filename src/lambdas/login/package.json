@@ -1,11 +1,12 @@
 {
-  "name": "putCompany",
+  "name": "login",
   "version": "1.0.0",
-  "description": "VertaaTaksit_putCompany",
+  "description": "",
   "main": "index.js",
   "author": "Markus Tyrkkö",
   "license": "GPL-3.0",
   "dependencies": {
-    "aws-sdk": "^2.303.0"
+    "aws-sdk": "^2.311.0",
+    "js-sha512": "^0.8.0"
   }
 }

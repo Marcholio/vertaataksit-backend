@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "author": "Markus Tyrkkö",
-  "license": "UNLICENSED",
+  "license": "GPL-3.0",
   "dependencies": {
     "@google/maps": "^0.5.5"
   }
